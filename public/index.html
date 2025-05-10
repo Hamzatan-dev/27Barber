@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Appointment System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo"><span class="number">27</span>Barbershop</div>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Diensten</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#gallery">Galerij</a></li>
+                        <li><a href="#pricing">Prijzen</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="videos/TestVideo.mp4" type="video/mp4">
+            Je browser ondersteunt geen video.
+        </video>
+        <div class="hero-overlay"></div> <!-- Overlay toegevoegd -->
+        <div class="hero-content">
+            <h1>Welkom bij TwentySeven Barbershop</h1>
+            <p>Wij creëren de perfecte look die bij jou past. Onze professionele stylisten staan voor je klaar om je
+                haar te transformeren.</p>
+            <button class="btn" id="book-now-btn">Maak Een Afspraak</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title">Onze Diensten</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-image">
+                        <img src="/api/placeholder/400/320" alt="Knippen">
+                    </div>
+                    <div class="service-content">
+                        <h3>Knippen & Styling</h3>
+                        <p>Onze ervaren stylisten geven je de perfecte look, afgestemd op jouw gezichtsvorm en
+                            persoonlijke stijl.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-image">
+                        <img src="/api/placeholder/400/320" alt="Kleuren">
+                    </div>
+                    <div class="service-content">
+                        <h3>Kleurtechnieken</h3>
+                        <p>Van subtiele highlights tot complete transformaties, wij bieden een breed scala aan
+                            professionele kleurbehandelingen.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-image">
+                        <img src="/api/placeholder/400/320" alt="Treatments">
+                    </div>
+                    <div class="service-content">
+                        <h3>Haartreatments</h3>
+                        <p>Geef je haar de verzorging die het verdient met onze luxe treatments voor gezond en glanzend
+                            haar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2 class="section-title">Ons Team</h2>
+            <div class="team-grid">
+                <div class="team-member fade-in">
+                    <div class="team-image">
+                        <img src="/api/placeholder/400/320" alt="Lisa">
+                    </div>
+                    <div class="team-info">
+                        <h4>Lisa Jansen</h4>
+                        <p>Senior Stylist</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="team-image">
+                        <img src="/api/placeholder/400/320" alt="Mark">
+                    </div>
+                    <div class="team-info">
+                        <h4>Mark de Vries</h4>
+                        <p>Kleurspecialist</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="team-image">
+                        <img src="/api/placeholder/400/320" alt="Sophie">
+                    </div>
+                    <div class="team-info">
+                        <h4>Sophie Peters</h4>
+                        <p>Junior Stylist</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="team-image">
+                        <img src="/api/placeholder/400/320" alt="Tim">
+                    </div>
+                    <div class="team-info">
+                        <h4>Tim Bakker</h4>
+                        <p>Baardspecialist</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <h2 class="section-title">Onze Creaties</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Hairstyle 1">
+                    <div class="gallery-overlay">
+                        <h4>Lange Lagen</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Hairstyle 2">
+                    <div class="gallery-overlay">
+                        <h4>Bob Cut</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Hairstyle 3">
+                    <div class="gallery-overlay">
+                        <h4>Kleurbehandeling</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Hairstyle 4">
+                    <div class="gallery-overlay">
+                        <h4>Balayage</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Hairstyle 5">
+                    <div class="gallery-overlay">
+                        <h4>Updo Styling</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/320" alt="Hairstyle 6">
+                    <div class="gallery-overlay">
+                        <h4>Krullen</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2 class="section-title">Onze Prijzen</h2>
+            <table class="pricing-table enhanced">
+                <thead>
+                    <tr>
+                        <th>Dienst</th>
+                        <th>Prijs</th>
+                        <th>Beschrijving</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FADE</td>
+                        <td>€27</td>
+                        <td>Een fade is een strakke, vloeiende overgang van lang naar kort haar, perfect voor een frisse
+                            en
+                            moderne look.</td>
+                    </tr>
+                    <tr>
+                        <td>CLASSIC</td>
+                        <td>€25</td>
+                        <td>Een classic cut is een tijdloos kapsel met strakke lijnen en een verzorgde afwerking.</td>
+                    </tr>
+                    <tr>
+                        <td>FADE / CLASSIC + BEARD</td>
+                        <td>€45</td>
+                        <td>Een fade of classic cut gecombineerd met een strakke beard trim zorgt voor de ultieme
+                            verzorgde
+                            look.</td>
+                    </tr>
+                    <tr>
+                        <td>BEARD</td>
+                        <td>€18</td>
+                        <td>Een beard trim zorgt voor een strakke, verzorgde baard die perfect bij jouw stijl past.</td>
+                    </tr>
+                    <tr>
+                        <td>KIDS (6-12)</td>
+                        <td>€20</td>
+                        <td>Een kids cut is een frisse en stijlvolle knipbeurt speciaal voor de kleintjes.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pricing-discount">
+                <p><strong>Korting:</strong> Bij het aantonen van uw studentenpas krijgt u een korting van €2.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Neem Contact Met Ons Op</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contactgegevens</h3>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Adres</h4>
+                            <p>Hoofdstraat 123, 1234 AB Amsterdam</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Telefoon</h4>
+                            <p>020 - 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@hairstylestudio.nl</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Openingstijden</h4>
+                            <p>Maandag - Vrijdag: 9:00 - 18:00</p>
+                            <p>Zaterdag: 9:00 - 17:00</p>
+                            <p>Zondag: Gesloten</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Stuur ons een bericht</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Naam" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Telefoonnummer">
+                        <textarea placeholder="Bericht" required></textarea>
+                        <button type="submit" class="btn">Versturen</button>
+                    </form>
+                </div>
+            </div>
+            <div class="map">
+                <!-- Hier komt later de Google Maps integratie -->
+                <div
+                    style="background-color: #ddd; height: 100%; display: flex; align-items: center; justify-content: center;">
+                    <p>Google Maps kaart komt hier</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Hair<span>Style</span> Studio</div>
+                    <p>Bij HairStyle Studio geloven we dat jouw haar je kroon is. Onze passie is om jou te helpen jezelf
+                        op je best te voelen door de perfecte stijl te creëren die bij jouw persoonlijkheid past.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Snelle Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Diensten</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#gallery">Galerij</a></li>
+                        <li><a href="#pricing">Prijzen</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Nieuwsbrief</h4>
+                    <p>Schrijf je in voor onze nieuwsbrief om op de hoogte te blijven van de nieuwste trends en
+                        aanbiedingen.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Jouw email adres" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 HairStyle Studio. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Maak Een Afspraak</h2>
+            <form class="booking-form">
+                <div>
+                    <label for="name">Naam</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="phone">Telefoonnummer</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div>
+                    <label for="service">Dienst</label>
+                    <select id="service" required>
+                        <option value="">-- Selecteer een dienst --</option>
+                        <option value="knippen">Knippen</option>
+                        <option value="kleuren">Kleuren</option>
+                        <option value="knippen_kleuren">Knippen & Kleuren</option>
+                        <option value="treatment">Treatment</option>
+                        <option value="styling">Styling</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="stylist">Stylist (optioneel)</label>
+                    <select id="stylist">
+                        <option value="">-- Geen voorkeur --</option>
+                        <option value="lisa">Lisa Jansen</option>
+                        <option value="mark">Mark de Vries</option>
+                        <option value="sophie">Sophie Peters</option>
+                        <option value="tim">Tim Bakker</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date">Datum</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div>
+                    <label for="time">Tijd</label>
+                    <input type="time" id="time" required>
+                </div>
+                <div>
+                    <label for="notes">Opmerkingen</label>
+                    <textarea id="notes"></textarea>
+                </div>
+                <button type="submit" class="btn">Afspraak Maken</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
