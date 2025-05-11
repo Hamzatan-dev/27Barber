@@ -117,5 +117,112 @@ document.querySelectorAll('.fade-in').forEach(element => {
 window.addEventListener('load', animateOnScroll);
 window.addEventListener('scroll', animateOnScroll);
 
-// Firebase integratie komt later
-// Deze plek is gereserveerd voor Firebase configuratie en authenticatie
+
+// Firebase Authentication
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyDt1ZL9aDYoBT9-sPBhn0UHMYzTLe8eCug",
+    authDomain: "barberdb-2025.firebaseapp.com",
+    projectId: "barberdb-2025",
+    storageBucket: "barberdb-2025.firebasestorage.app",
+    messagingSenderId: "108970799183",
+    appId: "1:108970799183:web:2a669bb5fe2f3e16c4ba3a",
+    measurementId: "G-SRGWD6Q8TB"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// Login Modal openen/sluiten
+const loginIcon = document.getElementById("login-icon");
+const loginModal = document.getElementById("loginModal");
+const closeLoginModal = document.querySelector("#loginModal .close-modal");
+
+loginIcon.addEventListener("click", () => {
+    loginModal.style.display = "flex";
+
+    // Zorg ervoor dat de tab "Inloggen" actief is en zichtbaar
+    loginTab.classList.add("active");
+    registerTab.classList.remove("active");
+    loginContent.style.display = "block";
+    registerContent.style.display = "none";
+});
+
+closeLoginModal.addEventListener("click", () => {
+    loginModal.style.display = "none";
+});
+
+// Inloggen met Firebase
+const loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("login-email").value;
+    const password = document.getElementById("password").value;
+
+    signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Inloggen geslaagd
+            const user = userCredential.user;
+            alert(`Welkom, ${user.email}`);
+            loginModal.style.display = "none";
+        })
+        .catch((error) => {
+            // Foutmelding weergeven
+            alert("Fout bij inloggen: " + error.message);
+        });
+});
+
+// Tabs in de modal
+const loginTab = document.getElementById("login-tab");
+const registerTab = document.getElementById("register-tab");
+const loginContent = document.getElementById("login-content");
+const registerContent = document.getElementById("register-content");
+
+loginTab.addEventListener("click", () => {
+    loginTab.classList.add("active");
+    registerTab.classList.remove("active");
+    loginContent.style.display = "block";
+    registerContent.style.display = "none";
+});
+
+registerTab.addEventListener("click", () => {
+    registerTab.classList.add("active");
+    loginTab.classList.remove("active");
+    registerContent.style.display = "block";
+    loginContent.style.display = "none";
+});
+
+// Registreren met Firebase
+const registerForm = document.getElementById("registerForm");
+
+registerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("register-name").value;
+    const email = document.getElementById("register-email").value;
+    const password = document.getElementById("register-password").value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Registratie geslaagd
+            const user = userCredential.user;
+            alert(`Welkom, ${name}! Je account is aangemaakt.`);
+            loginModal.style.display = "none";
+        })
+        .catch((error) => {
+            // Foutmelding weergeven
+            alert("Fout bij registreren: " + error.message);
+        });
+});

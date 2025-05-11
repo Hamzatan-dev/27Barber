@@ -30,6 +30,7 @@
                         <li><a href="#gallery">Galerij</a></li>
                         <li><a href="#pricing">Diensten</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" id="login-icon"><i class="fas fa-user"></i></a></li>
                     </ul>
                 </nav>
             </div>
@@ -42,7 +43,7 @@
             <source src="public/videos/TestVideo.mp4" type="video/mp4">
             Je browser ondersteunt geen video.
         </video>
-        <div class="hero-overlay"></div> <!-- Overlay toegevoegd -->
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Welkom bij TwentySeven Barbershop</h1>
             <p>Wij creëren de perfecte look die bij jou past. Onze professionele stylisten staan voor je klaar om je
@@ -317,7 +318,7 @@
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" id="email" required>
+                    <input type="email" id="booking-email" required>
                 </div>
                 <div>
                     <label for="phone">Telefoonnummer</label>
@@ -361,7 +362,34 @@
         </div>
     </div>
 
-    <script src="public/scripts/main.js"></script>
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-tabs">
+                <button class="tab active" id="login-tab">Inloggen</button>
+                <button class="tab" id="register-tab">Registreren</button>
+            </div>
+            <div class="tab-content" id="login-content">
+                <h2>Inloggen</h2>
+                <form id="loginForm">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Wachtwoord" required>
+                    <button type="submit" class="btn">Inloggen</button>
+                </form>
+            </div>
+            <div class="tab-content" id="register-content" style="display: none;">
+                <h2>Registreren</h2>
+                <form id="registerForm">
+                    <input type="text" id="register-name" placeholder="Naam" required>
+                    <input type="email" id="register-email" placeholder="Email" required>
+                    <input type="password" id="register-password" placeholder="Wachtwoord" required>
+                    <button type="submit" class="btn">Registreren</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="public/scripts/main.js"></script>
 </body>
 
 </html>

@@ -138,6 +138,7 @@ header.scrolled {
 nav ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 nav ul li {
@@ -167,6 +168,30 @@ nav ul li a:after {
 
 nav ul li a:hover:after {
     width: 100%;
+}
+
+nav ul li:last-child a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li:last-child a:hover {
+    background-color: goldenrod;
+    transform: scale(1);
+    color: black;
+}
+
+nav ul li:last-child a i {
+    cursor: pointer;
+}
+
+nav ul li:last-child a:after {
+    content: none;
 }
 
 /* Hero Section */
@@ -620,25 +645,31 @@ footer .section-title {
     }
 }
 
-/* Modal voor afspraak maken */
+/* Algemene modal-styling */
 .modal {
     display: none;
+    /* Verberg standaard de modal */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1001;
-    overflow-y: auto;
+    /* Donkere overlay */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .modal-content {
-    background-color: white;
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
+    background-color: #fff;
     border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
     position: relative;
 }
 
@@ -646,25 +677,83 @@ footer .section-title {
     position: absolute;
     top: 15px;
     right: 15px;
-    font-size: 24px;
+    font-size: 1.5rem;
+    color: #333;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
+.close-modal:hover {
+    color: goldenrod;
+}
+
+/* Tabs styling */
+.modal-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.modal-tabs .tab {
+    flex: 1;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background: none;
+    border: none;
+    outline: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.modal-tabs .tab.active {
+    color: goldenrod;
+    border-bottom: 2px solid goldenrod;
+}
+
+/* Form styling */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tab-content form input,
+.tab-content form button {
     width: 100%;
     padding: 12px 15px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin-bottom: 20px;
+    font-size: 14px;
     outline: none;
+    transition: border-color 0.3s ease;
 }
 
-.booking-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 500;
+.tab-content form input:focus {
+    border-color: goldenrod;
+}
+
+.tab-content form button {
+    background-color: goldenrod;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab-content form button:hover {
+    background-color: #d4a017;
 }
 
 /* Animaties */
