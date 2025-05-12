@@ -57,7 +57,6 @@ img {
 
 .btn:hover {
     background-color: #6e6e6e;
-    transform: translateY(-2px);
 }
 
 .container {
@@ -258,7 +257,6 @@ nav ul li:last-child a:after {
 #book-now-btn:hover {
     background-color: goldenrod;
     color: black;
-    transform: translateY(-2px);
 }
 
 /* About Section */
@@ -648,14 +646,12 @@ footer .section-title {
 /* Algemene modal-styling */
 .modal {
     display: none;
-    /* Verberg standaard de modal */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    /* Donkere overlay */
     z-index: 1000;
     justify-content: center;
     align-items: center;
@@ -738,6 +734,7 @@ footer .section-title {
     font-size: 14px;
     outline: none;
     transition: border-color 0.3s ease;
+    cursor: text;
 }
 
 .tab-content form input:focus {
@@ -753,7 +750,9 @@ footer .section-title {
 }
 
 .tab-content form button:hover {
-    background-color: #d4a017;
+    border: 1px solid goldenrod;
+    background-color: black;
+    color: goldenrod;
 }
 
 /* Animaties */
