@@ -16,7 +16,12 @@
     <header>
         <div class="container">
             <div class="header-container">
-                <div class="logo"><span class="number">TwentySeven </span>Barbershop</div>
+                <div class="logo">
+                    <a href="#home">
+                        <img src="https://www-static.27barbershop.be/wp-content/uploads/2025/01/cropped-barbershop-logo-e1738206625574-1.webp?media=1741669639"
+                            alt="27Barbershop Logo" />
+                    </a>
+                </div>
                 <div class="menu-toggle">
                     <span></span>
                     <span></span>
@@ -24,12 +29,12 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#home">Home</a></li>
                         <li><a href="#about">Over ons</a></li>
                         <li><a href="#team">Team</a></li>
                         <li><a href="#gallery">Galerij</a></li>
                         <li><a href="#pricing">Diensten</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" id="book-now-btn">Afspraak</a></li>
                         <li><a href="#" id="login-icon"><i class="fas fa-user"></i></a></li>
                     </ul>
                 </nav>
@@ -44,18 +49,16 @@
             Je browser ondersteunt geen video.
         </video>
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Welkom bij TwentySeven Barbershop</h1>
-            <p>Wij creëren de perfecte look die bij jou past. Onze professionele stylisten staan voor je klaar om je
-                haar te transformeren.</p>
-            <button class="btn" id="book-now-btn">Maak Een Afspraak</button>
-        </div>
     </section>
+
+    <!-- Banner -->
+    <div class="banner-marquee">
+        <div class="banner-track"></div>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="section about">
         <div class="container">
-            <h2 class="section-title">Over Ons</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>Welkom bij TwentySeven Barbershop, dé plek waar stijl en vakmanschap samenkomen. Onze kappers
@@ -72,8 +75,7 @@
                         zelfverzekerd voelt.</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://www-static.27barbershop.be/wp-content/uploads/2025/01/cropped-barbershop-logo-e1738206625574-1.webp?media=1741669639"
-                        alt="Over ons" />
+                    <img src="public/images/aboutus.jpg" alt="Over ons" />
                 </div>
             </div>
         </div>
@@ -81,8 +83,8 @@
 
     <!-- Team Section -->
     <section id="team" class="section">
-        <div class="container">
-            <h2 class="section-title">Ons Team</h2>
+        <div class="container with-background">
+            <h2 class="section-title">Team</h2>
             <div class="team-grid">
                 <div class="team-member fade-in">
                     <div class="team-image">
@@ -123,6 +125,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="team-member fade-in">
+                    <div class="team-image">
+                        <img src="public/images/default.jpg" alt="Rasul">
+                    </div>
+                    <div class="team-info">
+                        <h4>Rasul Masae</h4>
+                        <p>Stylist</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -130,7 +145,7 @@
     <!-- Gallery Section -->
     <section id="gallery" class="section gallery">
         <div class="container">
-            <h2 class="section-title">Onze Creaties</h2>
+            <h2 class="section-title">Galerij</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="public/images/mock1.jpg" alt="Hairstyle 1">
@@ -174,8 +189,8 @@
 
     <!-- Pricing Section -->
     <section id="pricing" class="section">
-        <div class="container">
-            <h2 class="section-title">Onze Diensten</h2>
+        <div class="container with-background">
+            <h2 class="section-title">Diensten</h2>
             <table class="pricing-table">
                 <thead>
                     <tr>
@@ -297,6 +312,11 @@
         </div>
     </section>
 
+    <!-- Banner -->
+    <div class="banner-marquee">
+        <div class="banner-track"></div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="footer-bottom">
@@ -305,62 +325,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Booking Modal -->
-    <!-- <div class="modal" id="bookingModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Maak Een Afspraak</h2>
-            <form class="booking-form">
-                <div>
-                    <label for="name">Naam</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="booking-email" required>
-                </div>
-                <div>
-                    <label for="phone">Telefoonnummer</label>
-                    <input type="tel" id="phone" required>
-                </div>
-                <div>
-                    <label for="service">Dienst</label>
-                    <select id="service" required>
-                        <option value="">-- Selecteer een dienst --</option>
-                        <option value="knippen">Knippen</option>
-                        <option value="kleuren">Kleuren</option>
-                        <option value="knippen_kleuren">Knippen & Kleuren</option>
-                        <option value="treatment">Treatment</option>
-                        <option value="styling">Styling</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="stylist">Stylist (optioneel)</label>
-                    <select id="stylist">
-                        <option value="">-- Geen voorkeur --</option>
-                        <option value="lisa">Lisa Jansen</option>
-                        <option value="mark">Mark de Vries</option>
-                        <option value="sophie">Sophie Peters</option>
-                        <option value="tim">Tim Bakker</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="date">Datum</label>
-                    <input type="date" id="date" required>
-                </div>
-                <div>
-                    <label for="time">Tijd</label>
-                    <input type="time" id="time" required>
-                </div>
-                <div>
-                    <label for="notes">Opmerkingen</label>
-                    <textarea id="notes"></textarea>
-                </div>
-                <button type="submit" class="btn">Afspraak Maken</button>
-            </form>
-        </div>
-    </div> -->
 
     <div class="modal" id="loginModal">
         <div class="modal-content">

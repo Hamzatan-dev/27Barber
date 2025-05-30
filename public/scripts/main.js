@@ -226,3 +226,19 @@ registerForm.addEventListener("submit", (e) => {
             alert("Fout bij registreren: " + error.message);
         });
 });
+
+// Banner slider functionality
+document.querySelectorAll('.banner-track').forEach(track => {
+    const word = '27Barbershop';
+    const separator = ' \u00A0 ';
+    let repeated = '';
+    let count = 0;
+
+    while (count < 40) { 
+        const colorClass = count % 2 === 0 ? 'barber-red' : 'barber-blue';
+        repeated += `<span class="banner-text ${colorClass}">${word}</span>${separator}`;
+        count++;
+    }
+
+    track.innerHTML = repeated + repeated;
+});
