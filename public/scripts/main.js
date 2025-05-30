@@ -230,15 +230,16 @@ registerForm.addEventListener("submit", (e) => {
 // Banner slider functionality
 document.querySelectorAll('.banner-track').forEach(track => {
     const word = '27Barbershop';
-    const separator = ' \u00A0 ';
     let repeated = '';
     let count = 0;
+    const total = 20;
 
-    while (count < 40) { 
+    while (count < total) {
         const colorClass = count % 2 === 0 ? 'barber-red' : 'barber-blue';
-        repeated += `<span class="banner-text ${colorClass}">${word}</span>${separator}`;
+        repeated += `<span class="banner-text ${colorClass}">${word}</span>`;
+        if (count < total - 1) repeated += ' ';
         count++;
     }
 
-    track.innerHTML = repeated + repeated;
+    track.querySelectorAll('.banner-loop').forEach(loop => loop.innerHTML = repeated);
 });

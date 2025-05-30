@@ -768,6 +768,7 @@ footer .section-title {
 }
 
 /* Banner styling */
+/* Banner styling */
 .banner-marquee {
     width: 100%;
     overflow: hidden;
@@ -781,19 +782,17 @@ footer .section-title {
 
 .banner-track {
     display: flex;
-    white-space: nowrap;
-    will-change: transform;
-    animation: banner-scroll 20s linear infinite;
+    width: max-content;
+    animation: banner-scroll 60s linear infinite;
 }
 
 .banner-text {
     font-size: 1.5rem;
-    color: #fff;
-    letter-spacing: 2px;
     font-weight: 700;
     text-transform: uppercase;
     opacity: 0.8;
     margin-right: 40px;
+    white-space: nowrap;
 }
 
 .barber-red {
