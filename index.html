@@ -34,8 +34,12 @@
                         <li><a href="#gallery">Galerij</a></li>
                         <li><a href="#pricing">Diensten</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="#" id="book-now-btn">Afspraak</a></li>
-                        <li><a href="#" id="login-icon"><i class="fas fa-user"></i></a></li>
+                        <li>
+                            <button id="book-now-btn" class="btn btn-primary nav-book-btn">
+                                Afspraak maken
+                            </button>
+                        </li>
+                        <li id="user-menu-container"></li>
                     </ul>
                 </nav>
             </div>
@@ -332,6 +336,7 @@
         </div>
     </footer>
 
+    <!-- Login Modal -->
     <div class="modal" id="loginModal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -341,6 +346,7 @@
             </div>
             <div class="tab-content" id="login-content">
                 <h2>Inloggen</h2>
+                <div id="login-error" class="auth-error" style="display:none;"></div>
                 <form id="loginForm">
                     <input type="email" id="login-email" placeholder="Email" required>
                     <input type="password" id="password" placeholder="Wachtwoord" required>
@@ -349,12 +355,47 @@
             </div>
             <div class="tab-content" id="register-content" style="display: none;">
                 <h2>Registreren</h2>
+                <div id="register-error" class="auth-error" style="display:none;"></div>
                 <form id="registerForm">
                     <input type="text" id="register-name" placeholder="Naam" required>
                     <input type="email" id="register-email" placeholder="Email" required>
                     <input type="password" id="register-password" placeholder="Wachtwoord" required>
                     <button type="submit" class="btn">Registreren</button>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="closeBookingModal">&times;</span>
+            <h2>Afspraak maken</h2>
+            <form id="bookingForm">
+                <select id="booking-barber" required>
+                    <option value="">Kies een kapper</option>
+                    <option value="tarik">Tarik Ulku</option>
+                    <option value="cihan">Cihan Ulku</option>
+                    <option value="yusuf">Yusuf Aydin</option>
+                    <option value="rasul">Rasul Masae</option>
+                </select>
+                <select id="booking-service" required>
+                    <option value="">Kies een dienst</option>
+                    <option value="fade">Fade</option>
+                    <option value="classic">Classic</option>
+                    <option value="fade-beard">Fade / Classic + Beard</option>
+                    <option value="beard">Beard</option>
+                    <option value="kids">Kids (6-12)</option>
+                </select>
+                <input type="date" id="booking-date" placeholder="Kies een dag" required>
+                <select id="booking-time" required>
+                    <option value="">Kies een tijd</option>
+                </select>
+                <textarea id="booking-notes" placeholder="Opmerkingen (optioneel)"></textarea>
+                <button type="submit" class="btn">Bevestigen</button>
+            </form>
+            <div id="booking-success" style="display:none; color:goldenrod; margin-top:16px;">
+                Je afspraak is succesvol geboekt!
             </div>
         </div>
     </div>
